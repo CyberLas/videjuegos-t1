@@ -144,4 +144,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d62ea1063113aa14083557489e599816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Ninja: {fileID: 10219059447774587}
   SurikenSpeed: 20
+  SurikenLife: 1

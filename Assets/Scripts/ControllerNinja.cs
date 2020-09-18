@@ -20,10 +20,11 @@ public class ControllerNinja : MonoBehaviour
 
     void Update()
     {
-        Kunai();
         rb.velocity = new Vector2(0,rb.velocity.y);
         animator.SetInteger("Run", 0);
         animator.SetInteger("Jump", 0);
+        animator.SetInteger("Trow", 0);
+
 
         if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
@@ -56,7 +57,8 @@ public class ControllerNinja : MonoBehaviour
         {
             if(muerte == 0)
             {
-               
+                animator.SetInteger("Trow", 1);
+                Instantiate(KunaiPrefab, KunaiSpawner.position, KunaiSpawner.rotation);
             }
         }
     }
@@ -64,13 +66,6 @@ public class ControllerNinja : MonoBehaviour
         if((other.gameObject.tag == "Zombie")) {
             animator.SetInteger("Dead", 1);
             muerte = 1;
-        }
-    }
-    public void Kunai()
-    {
-        if(Input.GetButtonDown("Fire1"))
-        {
-            Instantiate(KunaiPrefab, KunaiSpawner.position, KunaiSpawner.rotation);
         }
     }
 }

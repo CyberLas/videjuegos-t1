@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Zombie
   - Ninja
+  - Kunai
+  - Suriken
   layers:
   - Default
   - TransparentFX
@@ -42,4 +44,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Leve
+    uniqueID: 1880347689
+    locked: 0
+  - name: New Layer
+    uniqueID: 1712010265
     locked: 0
